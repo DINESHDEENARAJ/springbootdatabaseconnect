@@ -13,6 +13,8 @@ class JswApplicationTests {
 
 	@Autowired
 	companydetailrepository crep;
+	@Autowired
+	companydetailrepository crepchecking;
 
 	@Autowired
 	companydetailservice cser;
