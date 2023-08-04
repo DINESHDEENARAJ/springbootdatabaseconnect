@@ -8,15 +8,17 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class companydetailcontrol {
+public class companydetailcontrol
+{
     @Autowired
+            //POST
     companydetailservice servo;
     @PostMapping("/newcompanydetail")
-
     public String adding (@RequestBody companydetail cmpy)
     {
         return servo.creation(cmpy).getUsername()+"has been add success";
     }
+
     //get
     @GetMapping("readonlist")
     public List<companydetail> viewall()
@@ -33,7 +35,8 @@ public class companydetailcontrol {
     }
     //delete method
     @DeleteMapping("/deletebyid/{id}")
-    public String removing(@PathVariable("id")int id){
+    public String removing(@PathVariable("id")int id)
+    {
         return servo.Deleting(id);
     }
     //read by list
@@ -42,5 +45,4 @@ public class companydetailcontrol {
     {
         return servo.readlist(id);
     }
-
 }

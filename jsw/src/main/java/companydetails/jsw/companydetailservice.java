@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class companydetailservice {
-
+public class companydetailservice
+{
     @Autowired
     companydetailrepository com;
 
@@ -18,7 +18,7 @@ public class companydetailservice {
         return com.save(comm);
     }
     //get
-    List<companydetail> listallcompanydetails()
+    public  List<companydetail> listallcompanydetails()
     {
         return (List<companydetail>) com.findAll();
     }

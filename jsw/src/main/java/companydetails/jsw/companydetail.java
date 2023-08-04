@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class companydetail {
+public class companydetail
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private int userid;
     private String username;
     private String materialname;
